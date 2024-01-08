@@ -441,7 +441,7 @@ team_abrev = {'Arsenal': 'Ars',
             'Man United': 'Mun',
             'Middlesbrough': 'Mid',
             'Newcastle': 'New',
-            'Norwich': 'Nfo',
+            'Norwich': 'Nor',
             'Nott\'m Forest': 'Nfo',
             'Portsmouth': 'Por',
             'QPR': 'Qpr',
@@ -483,7 +483,7 @@ def plot_pie(stat, statname):
     team_labels = [team_abrev[i] for i in sorted_stat.index]
 
     fig1, ax1 = plt.subplots(figsize=(8, 8))
-    ax1.pie(sorted_stat, labels=team_labels, autopct='%1.1f%%', startangle=90)
+    ax1.pie(sorted_stat, labels=team_labels, autopct='%1.1f%%', startangle=90, explode=(0.2,0.15,0.1,0.05,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0), shadow=True)
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
     # title = 'PieChart of ' + statname
     # plt.title(title)
@@ -595,7 +595,7 @@ st.sidebar.header('Links')
 st.sidebar.link_button('GitHub Repo', 'https://github.com/saranggalada/EDA-English-Premier-League-24yr')
 st.sidebar.link_button('Data Source', 'https://www.football-data.co.uk/')
 # st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
-st.sidebar.markdown("---\n*Copyright (c) 2024:* \n *Sarang Galada*")
+st.sidebar.markdown("---\n*Copyright (c) 2024: Sarang Galada*")
 
 season = st.selectbox('Select EPL Season', ('2023-24 season','2022-23 season','2021-22 season',
                                      '2020-21 season','2019-20 season','2018-19 season',
