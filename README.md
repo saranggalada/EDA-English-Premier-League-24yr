@@ -1,2 +1,2 @@
-# EDA-English-Premier-League-24yr
-An analytical deep dive into the last 24 years of the English Premier League!
+# EPL Viz
+A visual deep dive into the last *24 years* of the **English Premier League**!
