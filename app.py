@@ -594,7 +594,7 @@ st.write('---')
 st.sidebar.header('Links')
 st.sidebar.link_button('GitHub Repo', 'https://github.com/saranggalada/EDA-English-Premier-League-24yr')
 st.sidebar.link_button('Data Source', 'https://www.football-data.co.uk/')
-st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
+# st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
 st.sidebar.markdown("---\n*Copyright (c) 2024:* \n *Sarang Galada*")
 
 season = st.selectbox('Select EPL Season', ('2023-24 season','2022-23 season','2021-22 season',
