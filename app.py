@@ -586,8 +586,8 @@ def plot_scatter(data, stat1, stat2, statname1, statname2):
 st.set_page_config(page_icon="img/pl.jpg", page_title="EPL Viz", layout="wide")
 
 st.write("""
-         # EPL Viz
-         A visual deep dive into the last *24 years* of the **English Premier League**!
+         # ⚽ EPL Viz ✨
+         A visual deep dive into the last *24 years* of the `English Premier League`! 🕵️‍♂️
          """)
 st.write('---')
 
