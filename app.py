@@ -583,7 +583,7 @@ def plot_scatter(data, stat1, stat2, statname1, statname2):
 
 # Web app code
     
-st.set_page_config(page_icon="pl.jpg",page_title="EPL Viz")
+st.set_page_config(page_icon="img/pl.jpg", page_title="EPL Viz", layout="wide")
 
 st.write("""
          # EPL Viz
