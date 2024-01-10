@@ -496,7 +496,7 @@ def plot_pie(stat, statname):
 def plot_bar(stat, hstat, statname):
     sorted_stat = stat.sort_values(ascending=False)
     team_labels = [team_abrev[i] for i in sorted_stat.index]
-    sorted_hstat = hstat.sort_values(ascending=False)
+    sorted_hstat = hstat.loc[team_labels]
 
     hlabel = 'Home ' + statname
     alabel = 'Away ' + statname
