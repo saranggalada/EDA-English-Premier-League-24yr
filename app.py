@@ -237,9 +237,11 @@ def get_league_table(SeasonPoints, SeasonWins, SeasonDraws, SeasonLoss, SeasonGo
     table['GF'] = SeasonGoalsFor
     table['GA'] = SeasonGoalsAgainst
     table['GD'] = SeasonGoalDifference
-    table['Pos'] = pd.Series(range(1,21), index = table.index)
+    # table.set_index('Club', inplace=True)
+    table = table.sort_values(by=['Pts','GD','GF'], ascending=False)
+    table['Pos'] = pd.Series(range(1,21), index=table['Club'])
+    # table.reset_index(inplace=True)
     table.set_index('Pos', inplace=True)
-    table = table.sort_values(by=['Pts','GD','GF'], ascending=False)    
     
     return table
 
@@ -462,7 +464,16 @@ team_abrev = {'Arsenal': 'Ars',
 
 # Plots the league table
 def plot_table(table):
-    st.dataframe(table)
+    # st.dataframe(table)
+    st.dataframe(
+    table.style.applymap(
+        lambda _: "background-color: LightGreen;", subset=([1,2,3,4], slice(None))
+    ).applymap(
+        lambda _: "background-color: #FFA756;", subset=([5], slice(None))
+    ).applymap(
+        lambda _: "background-color: #FF9999;", subset=([18,19,20], slice(None))
+    )
+)
 
 
 # Plots a line chart of points progression for all teams together over the season
@@ -473,6 +484,7 @@ def plot_season(points):
     plt.title('Season Progression')
     plt.xlabel('Matchweek')
     plt.ylabel('Points')
+    plt.xticks(list(range(1, totalmw+1)))
     plt.legend(srt_p.columns, bbox_to_anchor=(1.05, 1), loc='upper left')
     st.pyplot(fig)
 
