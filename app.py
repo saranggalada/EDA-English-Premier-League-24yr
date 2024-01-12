@@ -227,9 +227,9 @@ def get_home_away(ds):
 # To keep track of league table throughout season
 def get_league_table(SeasonPoints, SeasonWins, SeasonDraws, SeasonLoss, SeasonGoalsFor, SeasonGoalsAgainst, SeasonGoalDifference):
 
-    table = pd.DataFrame(columns=['Pos','Team','MP','W','D','L','GF','GA','GD','Pts'])
+    table = pd.DataFrame(columns=['Pos','Club','MP','W','D','L','GF','GA','GD','Pts'])
     table['Pts'] = SeasonPoints
-    table['Team'] = SeasonPoints.index
+    table['Club'] = SeasonPoints.index
     table['MP'] = SeasonWins + SeasonDraws + SeasonLoss
     table['W'] = SeasonWins
     table['D'] = SeasonDraws
@@ -237,9 +237,10 @@ def get_league_table(SeasonPoints, SeasonWins, SeasonDraws, SeasonLoss, SeasonGo
     table['GF'] = SeasonGoalsFor
     table['GA'] = SeasonGoalsAgainst
     table['GD'] = SeasonGoalDifference
-    table = table.set_index('Team')
+    table = table.set_index('Club')
     table = table.sort_values(by=['Pts','GD','GF'], ascending=False)
     table['Pos'] = pd.Series(range(1,21), index=table.index)
+    table = table.set_index('Pos')
     
     return table
 
