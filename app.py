@@ -241,7 +241,7 @@ def get_league_table(SeasonPoints, SeasonWins, SeasonDraws, SeasonLoss, SeasonGo
     table = table.sort_values(by=['Pts','GD','GF'], ascending=False)
     table['Pos'] = pd.Series(range(1,21), index=table.index)
     table.reset_index(inplace=True)
-    # table.set_index('Pos', inplace=True)
+    table.set_index('Pos', inplace=True)
     
     return table
 
