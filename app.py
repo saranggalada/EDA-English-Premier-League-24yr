@@ -466,14 +466,14 @@ team_abrev = {'Arsenal': 'Ars',
 def plot_table(table):
     # st.dataframe(table)
     st.dataframe(
-    table.style.applymap(
-        lambda _: "background-color: LightGreen;", subset=([1,2,3,4], slice(None))
-    ).applymap(
-        lambda _: "background-color: #FFA756;", subset=([5], slice(None))
-    ).applymap(
-        lambda _: "background-color: #FF9999;", subset=([18,19,20], slice(None))
-    )
-)
+        table.style.applymap(
+            lambda _: "background-color: LightGreen;", subset=([1,2,3,4], slice(None))
+        ).applymap(
+            lambda _: "background-color: #FFA756;", subset=([5], slice(None))
+        ).applymap(
+            lambda _: "background-color: #FF9999;", subset=([18,19,20], slice(None))
+        )
+    )  
 
 
 # Plots a line chart of points progression for all teams together over the season
