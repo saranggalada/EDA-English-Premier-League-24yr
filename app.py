@@ -48,8 +48,8 @@ def cum_results(ds):
     ds['AwayLosses'] = np.where(ds['FTR'] == 'H', 1, 0)
 
     # Create new columns for homepoints and awaypoints for each fixture
-    ds['HomePoints'] = np.where(ds['FTR'] == 'H', 3, np.where(ds['FTR'] == 'A', 0, 1))
-    ds['AwayPoints'] = np.where(ds['FTR'] == 'A', 3, np.where(ds['FTR'] == 'H', 0, 1))
+    ds['HomePoints'] = np.where(ds['FTR'] == 'H', 3, np.where(ds['FTR'] == 'D', 1, 0))
+    ds['AwayPoints'] = np.where(ds['FTR'] == 'A', 3, np.where(ds['FTR'] == 'D', 1, 0))
     
     # the value corresponding to keys is a list containing the match location.
     for i in range(len(ds)):
