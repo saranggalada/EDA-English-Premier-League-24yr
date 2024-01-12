@@ -237,7 +237,7 @@ def get_league_table(SeasonPoints, SeasonWins, SeasonDraws, SeasonLoss, SeasonGo
     table['GF'] = SeasonGoalsFor
     table['GA'] = SeasonGoalsAgainst
     table['GD'] = SeasonGoalDifference
-    table['Pos'] = pd.Series(range(1,21))
+    table['Pos'] = pd.Series(range(1,21), index = table.index)
     table.set_index('Pos', inplace=True)
     table = table.sort_values(by=['Pts','GD','GF'], ascending=False)    
     
