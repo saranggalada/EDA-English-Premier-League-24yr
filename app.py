@@ -583,7 +583,7 @@ def plot_scatter(data, stat1, stat2, statname1, statname2):
 
 # Web app code
     
-st.set_page_config(page_icon="img/pl.jpg", page_title="EPL Viz", layout="wide")
+st.set_page_config(page_icon="img/pl.jpg", page_title="EPL Viz", layout="centered")
 
 st.write("""
          # ⚽ EPL Viz ✨
@@ -592,8 +592,14 @@ st.write("""
 st.write('---')
 
 st.sidebar.header('Links')
-st.sidebar.link_button('GitHub Repo', 'https://github.com/saranggalada/EDA-English-Premier-League-24yr')
-st.sidebar.link_button('Data Source', 'https://www.football-data.co.uk/')
+# st.sidebar.link_button('GitHub Repo', 'https://github.com/saranggalada/EDA-English-Premier-League-24yr')
+# st.sidebar.link_button('Data Source', 'https://www.football-data.co.uk/')
+st.sidebar.write(
+        "[![GitHub](https://github.com/saranggalada/EDA-English-Premier-League-24yr/blob/main/img/github.png)]"
+        "(https://github.com/saranggalada/EDA-English-Premier-League-24yr)")
+st.sidebar.write(
+        "[![Data Source](https://github.com/saranggalada/EDA-English-Premier-League-24yr/blob/main/img/database.png)]"
+        "(https://www.football-data.co.uk/)")
 # st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
 st.sidebar.markdown("---\n*Copyright (c) 2024: Sarang Galada*")
 
