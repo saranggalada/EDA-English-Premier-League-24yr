@@ -401,7 +401,7 @@ data.append(pd.read_csv('data/epl1920.csv'))
 data.append(pd.read_csv('data/epl2021.csv'))
 data.append(pd.read_csv('data/epl2122.csv'))
 data.append(pd.read_csv('data/epl2223.csv'))
-data.append(pd.read_csv('data/epl2324.csv'))
+data.append(pd.read_csv('data/E0.csv'))
 
 # for i in range(24):
 #     data[i].to_csv('engg_data/epl' + str("{:02d}".format(i)) + str("{:02d}".format(i+1)) + '.csv', index=False)
@@ -496,7 +496,7 @@ def plot_pie(stat, statname):
 def plot_bar(stat, hstat, statname):
     sorted_stat = stat.sort_values(ascending=False)
     team_labels = [team_abrev[i] for i in sorted_stat.index]
-    sorted_hstat = hstat.loc[sorted_stat.index]
+    sorted_hstat = hstat.sort_values(ascending=False)
 
     hlabel = 'Home ' + statname
     alabel = 'Away ' + statname
@@ -583,7 +583,7 @@ def plot_scatter(data, stat1, stat2, statname1, statname2):
 
 # Web app code
     
-st.set_page_config(page_icon="img/pl.jpg", page_title="EPL Viz")
+st.set_page_config(page_icon="img/pl.jpg", page_title="EPL Viz", layout="wide")
 
 st.write("""
          # ⚽ EPL Viz ✨
@@ -592,14 +592,14 @@ st.write("""
 st.write('---')
 
 st.sidebar.header('Links')
-# st.sidebar.link_button('GitHub Repo', 'https://github.com/saranggalada/EDA-English-Premier-League-24yr')
-# st.sidebar.link_button('Data Source', 'https://www.football-data.co.uk/')
-st.sidebar.write(
-        "[![GitHub](https://github.com/saranggalada/EDA-English-Premier-League-24yr/blob/main/img/github.png)]"
-        "(https://github.com/saranggalada/EDA-English-Premier-League-24yr)")
-st.sidebar.write(
-        "[![Data Source](https://github.com/saranggalada/EDA-English-Premier-League-24yr/blob/main/img/database.png)]"
-        "(https://www.football-data.co.uk/)")
+st.sidebar.link_button('GitHub Repo', 'https://github.com/saranggalada/EDA-English-Premier-League-24yr')
+st.sidebar.link_button('Data Source', 'https://www.football-data.co.uk/')
+# st.sidebar.write(
+#         "[![GitHub](https://github.com/saranggalada/EDA-English-Premier-League-24yr/blob/main/img/github.png)]"
+#         "(https://github.com/saranggalada/EDA-English-Premier-League-24yr)")
+# st.sidebar.write(
+#         "[![Data Source](https://github.com/saranggalada/EDA-English-Premier-League-24yr/blob/main/img/database.png)]"
+#         "(https://github.com/saranggalada/EDA-English-Premier-League-24yr)")
 # st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
 st.sidebar.markdown("---\n*Copyright (c) 2024: Sarang Galada*")
 
