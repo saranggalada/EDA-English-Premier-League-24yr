@@ -508,7 +508,14 @@ def plot_pie(stat, statname):
 def plot_bar(stat, hstat, statname):
     sorted_stat = stat.sort_values(ascending=False)
     team_labels = [team_abrev[i] for i in sorted_stat.index]
-    sorted_hstat = hstat.sort_values(ascending=False)
+
+    # Sort the home stat in the same order as sorted_stat
+    sorted_hstat = {}
+    for team in sorted_stat.index:
+        sorted_hstat[team] = hstat[team]
+
+    sorted_hstat = pd.Series(sorted_hstat)
+
 
     hlabel = 'Home ' + statname
     alabel = 'Away ' + statname
