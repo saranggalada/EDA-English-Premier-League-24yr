@@ -606,21 +606,37 @@ st.set_page_config(page_icon="img/pl.jpg", page_title="EPL Viz", layout="wide")
 
 st.write("""
          # ⚽ EPL Viz ✨
-         A visual deep dive into the last *24 years* of the **English Premier League**! 🕵️‍♂️
+         A visual deep dive 🔎 into the last *24 years* of the **English Premier League**! 🕵🏼
          """)
 st.write('---')
 
-st.sidebar.header('Links')
-st.sidebar.link_button('GitHub Repo', 'https://github.com/saranggalada/EDA-English-Premier-League-24yr')
-st.sidebar.link_button('Data Source', 'https://www.football-data.co.uk/')
-# st.sidebar.write(
-#         "[![GitHub](https://github.com/saranggalada/EDA-English-Premier-League-24yr/blob/main/img/github.png)]"
-#         "(https://github.com/saranggalada/EDA-English-Premier-League-24yr)")
-# st.sidebar.write(
-#         "[![Data Source](https://github.com/saranggalada/EDA-English-Premier-League-24yr/blob/main/img/database.png)]"
-#         "(https://github.com/saranggalada/EDA-English-Premier-League-24yr)")
-# st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
+# Sidebar
+
+st.sidebar.image("img/pl.png")
+st.sidebar.markdown("<h2 style='text-align: center;'>EPL Viz</h2>", unsafe_allow_html=True)
+# st.sidebar.header('EPL Viz')
+# cols = st.sidebar.columns(2)
+# cols[0].sidebar.header('EPL Viz')
+# cols[1].link_button('About', 'https://www.football-data.co.uk/')
+st.sidebar.markdown('---')
+
+st.sidebar.header('See Also')
+st.sidebar.markdown(
+    """
+- [The Pitch Prophecy](https://pitch-prophecy.streamlit.app/) 🔮 \
+(EPL Win Predictor)
+- [The xG Philosophy](https://xg-philosophy.streamlit.app/) 🧙🏼‍♂️ \
+(EPL xG Projector)
+"""
+)
+st.sidebar.markdown('---')
+
+cols = st.sidebar.columns(2)
+cols[0].link_button('GitHub Repo', 'https://github.com/saranggalada/EPL-Expected-Goals-Projector')
+cols[1].link_button('Data Source', 'https://www.football-data.co.uk/')
 st.sidebar.markdown("---\n*Copyright (c) 2024: Sarang Galada*")
+# st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
+
 
 season = st.selectbox('Select EPL Season', ('2023-24 season','2022-23 season','2021-22 season',
                                      '2020-21 season','2019-20 season','2018-19 season',
