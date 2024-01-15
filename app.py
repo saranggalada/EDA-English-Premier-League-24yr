@@ -613,7 +613,7 @@ st.write('---')
 # Sidebar
 
 st.sidebar.image("img/pl.png")
-st.sidebar.markdown("<h2 style='text-align: center;'>EPL Viz</h2>", unsafe_allow_html=True)
+# st.sidebar.markdown("<h2 style='text-align: center;'>EPL Viz</h2>", unsafe_allow_html=True)
 # st.sidebar.header('EPL Viz')
 # cols = st.sidebar.columns(2)
 # cols[0].sidebar.header('EPL Viz')
