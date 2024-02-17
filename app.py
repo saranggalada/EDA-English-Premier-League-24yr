@@ -623,6 +623,7 @@ st.sidebar.markdown('---')
 st.sidebar.header('See Also')
 st.sidebar.markdown(
     """
+- [Pulse] (https://pulse-ondc.streamlit.app/) ⚡ (Blazing fast ONDC engine)\
 - [The Pitch Prophecy](https://pitch-prophecy.streamlit.app/) 🔮 \
 (EPL Win Predictor)
 - [The xG Philosophy](https://xg-philosophy.streamlit.app/) 🧙🏼‍♂️ \
@@ -632,10 +633,10 @@ st.sidebar.markdown(
 st.sidebar.markdown('---')
 
 cols = st.sidebar.columns(2)
-cols[0].link_button('GitHub Repo', 'https://github.com/saranggalada/EPL-Expected-Goals-Projector')
+cols[0].link_button('GitHub Repo', 'https://github.com/saranggalada/eda-english-premier-league-24yr')
 cols[1].link_button('Data Source', 'https://www.football-data.co.uk/')
+# cols[2].sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
 st.sidebar.markdown("---\n*Copyright (c) 2024: Sarang Galada*")
-# st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
 
 
 season = st.selectbox('Select EPL Season', ('2023-24 season','2022-23 season','2021-22 season',
