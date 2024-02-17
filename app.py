@@ -623,7 +623,7 @@ st.sidebar.markdown('---')
 st.sidebar.header('See Also')
 st.sidebar.markdown(
     """
-- [Pulse] (https://pulse-ondc.streamlit.app/) ⚡ (Blazing fast ONDC engine)\
+- [Pulse] (https://pulse-ondc.streamlit.app/) ⚡ (Blazing fast ONDC engine) \
 - [The Pitch Prophecy](https://pitch-prophecy.streamlit.app/) 🔮 \
 (EPL Win Predictor)
 - [The xG Philosophy](https://xg-philosophy.streamlit.app/) 🧙🏼‍♂️ \
